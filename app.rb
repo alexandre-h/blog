@@ -5,7 +5,7 @@ require_relative 'database'
 configure do
   set :database, DB
   set :comments, COMMENTS
-  set :posts, @database.zip(@comments)
+  set :posts, settings.database.zip(settings.comments)
 end
 
 get '/' do
@@ -45,6 +45,6 @@ end
 post '/search' do
   @search = params[:search]
   posts = settings.posts.reverse
-  @posts = posts.select { |item| item[0][:title].include? '#{params[:search]}' }
+  @posts = posts.select { |item| item[0][:title].include? @search }
   erb :search
 end
