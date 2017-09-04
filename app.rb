@@ -38,10 +38,6 @@ get '/article/:id' do
   erb :article
 end
 
-get '/contact' do
-  erb :contact
-end
-
 post '/search' do
   @search = params[:search]
   posts = settings.posts.reverse
