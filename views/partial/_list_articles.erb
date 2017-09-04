@@ -1,0 +1,15 @@
+        <div class="articles-list">
+          <div class="a-1">
+            <% @posts.each do |post| %>
+                <div class="col-md-6 abt-left">
+<a href="/article/<%= post[0][:index] %>">
+                  <img src="<%= post[0][:photo] %>" onerror="this.src='/images/no_pic_image.png'"/>
+                  <h3><%= post[0][:title] %><span class="rating-static rating-<%= post[0][:rating] %>"></span></h3>
+                  <p><%= post[0][:content] %></p>
+                  <p> <%= post[1].count %> Comments</p>
+                  </a>
+                </div>
+            <% end %>
+            <div class="clearfix"></div>
+          </div>
+        </div>

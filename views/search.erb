@@ -1,0 +1,17 @@
+<div class="articles">
+  <div class="container">
+    <div class="article-main">
+      <div class="col-md-8 about-left">
+        <div class="presentation">
+          <p>Find here</p>
+          <h3>The article(s) corresponding to: "<%= @search %>"</h3>
+        </div>
+        <%= erb :'partial/_list_articles' %>
+        <div class="sorted-btn  col-md-12 text-center">
+          <a href="/articles">All articles</a>
+        </div>
+      </div>
+      <%= erb :'partial/_extern_link' %>
+    </div>
+  </div>
+</div>

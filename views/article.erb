@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-md-8 ">
+    <div class="article">
+      <h3><%= @post[0][0][:title] %><span class="pull-right rating-static rating-<%= @post[0][0][:rating] %>"></span></h3>
+      <img class="center-block" src="<%= @post[0][0][:photo] %>" onerror="this.src='/images/no_pic_image.png'">
+      <p><%= @post[0][0][:content] %></p>
+      <h3><small class="pull-right"><%= @post[0][1].count %> comment(s)</small> Comments </h3>
+    </div>
+    <% @post[0][1].each do |comment|  %>
+        <div class="comment-separation">
+          <p><%= comment %></p>
+        </div>
+    <% end %>
+  </div>
+  <%= erb :'/partial/_extern_link' %>
+</div>

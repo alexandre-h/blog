@@ -1,0 +1,23 @@
+<div class="articles">
+  <div class="container">
+    <div class="article-main">
+      <div class="col-md-8 about-left">
+        <div class="presentation">
+          <p>Find here</p>
+          <h3>All articles</h3>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+          <div class="sorted-btn  col-md-6 text-center">
+            <a href="/articles/stars">Sort by stars</a>
+          </div>
+          <div class="sorted-btn  col-md-6 text-center">
+            <a href="/articles/comments">Sort by comments</a>
+          </div>
+        </div>
+        <%= erb :'partial/_list_articles' %>
+      </div>
+      <%= erb :'partial/_extern_link' %>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
