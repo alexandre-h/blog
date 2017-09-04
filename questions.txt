@@ -55,17 +55,21 @@ Si vous êtes Français, vous pouvez répondre en Français.
 
 1. Describe the color yellow to someone who is blind
 
->
-
-Did you already sit outside a summer day? Yes! Do you remember the warm on your face with a little wind?! You felt well, peaceful, it's the yellow, the sun color.
-this color brings joy, warmth, friendship
+> Did you already sit outside during a summer day? Yes! Do you remember the warm on your face with a little wind?!
+You felt well, peaceful, it's how you can represent the yellow, the sun color.
+This color brings joy, warmth, friendship.
 
 3. Describe the data model you’d use for a Battleship game. What are the key objects? How will your code use them?
 
-> The key objects are :
+> They will have different key objects :
   - team has_many players
   - player has_one :category has_one :ship
-  - category has_one :ship
+  - category has_many :ships
   - ship has_one :capacity
   - capacity (attack, defense)
 
+
+We will have two teams fighting. Each team will be composed with some players, a player contains a name, one category
+and one ship. The category (defenser / attacker) and for each category different ships available. The user will have to
+choose first the category he wants to play and then a ship who will be associate to the user.
+The ship could be choose by his capacity in attack or defense.
